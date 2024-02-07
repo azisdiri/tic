@@ -3,7 +3,7 @@ $host = 'localhost';
 $user = 'root';
 $bdd = 'formation';
 $passwd = '';
-$num = $_GET['num'];
+$num = $_POST['num'];
 
 // Connexion au serveur
 mysql_connect($host, $user,$passwd) or die("erreur de connexion au serveur");
