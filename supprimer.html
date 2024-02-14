@@ -6,12 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="supprimer.php">
-        <label>num:</label>
-        <input type="number" name="num">
-        <br> 
-        <br>   
-        <input type="submit" value="supprimer">
-    </form>
+    <fieldset>
+        <legend>
+            supprimer un livre
+        </legend>
+            <form action="supprimer.php" method="get">
+                <label>
+                    identifiant du livre
+                </label>
+                <input type="text" name="id">
+                <input type="submit" value="supprimer">
+            </form>
+    </fieldset>
 </body>
 </html>

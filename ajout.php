@@ -1,4 +1,5 @@
 <?php
+
 $host = 'localhost';
 $user = 'root';
 $bdd = 'bibliotheque';
@@ -13,15 +14,16 @@ mysql_connect($host, $user,$passwd) or die("erreur de connexion au serveur");
 // Connexion à la base
 mysql_select_db($bdd) or die("erreur de connexion a la base de données");
 // Creation et envoi de la requete
-$res= mysql_query("delete from livre where id_liv = '$id'");
+mysql_query("INSERT Into livre VALUES ('$id','$nom','$aut','$edi','$dat')");
 
-if(mysql_num_rows($res)==0 ){
+if(mysql_affected_rows()==-1){
     die("echec");
     }
-    else { mysql_query("update livre set nom_liv='$nom' ");}
+    else { echo"succes";}
 
 // Deconnexion de la base de donnees
 mysql_close();
-
-
 ?>
+
+
+
